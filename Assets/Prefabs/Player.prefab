@@ -79,7 +79,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 0.4575472, g: 1, b: 0.92275524, a: 0.5686275}
   m_FlipX: 0
@@ -117,9 +117,10 @@ GameObject:
   - component: {fileID: 1586780833369288148}
   - component: {fileID: 5943868381077694373}
   - component: {fileID: 5220105924948721465}
+  - component: {fileID: 3283773925164850136}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -237,6 +238,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Aimer
   cooldown: 1
   bullet: {fileID: 9222702094462649171, guid: 0c6a220ee4153ea4a80678fd0ff36b53, type: 3}
+--- !u!114 &3283773925164850136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2362959764903194870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24a61ef87c483e34cb859b4d32dd6d68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AbilityHandler
 --- !u!1 &5067911902746440358
 GameObject:
   m_ObjectHideFlags: 0
