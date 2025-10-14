@@ -88,9 +88,18 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Ability",
+                    "name": "Ability 1",
                     "type": "Button",
-                    "id": "0579dff9-cf70-49dd-a762-827eb0a19981",
+                    "id": "47c60624-9ed8-45c6-8d9b-822e3c2efa83",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Ability 2",
+                    "type": "Button",
+                    "id": "35a51c7b-db3c-44e9-81a1-865b46814c24",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -485,23 +494,23 @@
                 },
                 {
                     "name": "",
-                    "id": "151819e9-82ea-40f6-bd8e-4e5b4487fbba",
-                    "path": "<Keyboard>/q",
+                    "id": "c4c67720-0be9-448d-91c1-b5cc7be4ce1c",
+                    "path": "<Keyboard>/e",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Ability",
+                    "action": "Ability 2",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "55b83f9b-9afe-46bb-b9d4-cf2dd2915f0d",
-                    "path": "<Keyboard>/e",
+                    "id": "7ad1c4d0-e7aa-484a-8a66-519b40bebdef",
+                    "path": "<Keyboard>/q",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Ability",
+                    "action": "Ability 1",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -19,7 +19,6 @@ public class Aimer : MonoBehaviour
     private void shoot()
     {
         Vector3 aimDirection = getAimDirection(this.transform.position);
-        Debug.Log(Vector2.Angle(Vector2.up, aimDirection));
         Instantiate(bullet, this.transform.position + aimDirection, Quaternion.Euler(0, 0, Vector2.SignedAngle(Vector2.up, aimDirection)));
     }
 

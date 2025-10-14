@@ -3,14 +3,21 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "AbilityData", menuName = "Pickups/Abilities")]
 public class AbilityScriptableObject : ScriptableObject
 {
-    [SerializeField] private string abilityName;
-    [SerializeField] private Sprite abilitySprite;
-    [SerializeField] private AbilityTypes abilityType;
+    [Header("Ability Description")]
+    public string abilityName;
+    public string abilityDescription;
+    public AbilityTypes abilityType;
 
-    [SerializeField] private int damage;
-    [SerializeField] private float speed;
+    [Header("Ability Visuals")]
+    public Sprite abilitySprite;
 
-    [SerializeField] private float duration;
+    [Header("Ability Damage")]
+    public int initialDamage;
+    public int damageOverTime;
+    public float tickTime;
 
-    [SerializeField] private string abilityDescription;
+    [Header("Ability Functionality")]
+    public float speed;
+    public float duration;
+    public float cooldown;
 }
