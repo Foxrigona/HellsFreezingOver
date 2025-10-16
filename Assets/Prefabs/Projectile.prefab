@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -117466112709091117}
   - component: {fileID: -1060118217576712821}
   - component: {fileID: -6703693643316796388}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Projectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -107,6 +107,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Projectile
   targets: []
+  hitbox: {fileID: -1060118217576712821}
 --- !u!61 &-117466112709091117
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -123,7 +124,7 @@ BoxCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2

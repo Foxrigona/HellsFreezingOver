@@ -6,10 +6,11 @@ using System.Collections.Generic;
 public class StaticAttack : Ability
 {
     private List<Health> target = new List<Health>();
-    public void setAbilityInformation(AbilityScriptableObject abilityInformation)
+    public void setAbilityInformation(AbilityScriptableObject abilityInformation, ActorType userType)
     {
-        base.setAbilityInformation(abilityInformation);
-        spRenderer.size = new Vector2(3, 3);
+        base.setAbilityInformation(abilityInformation, userType);
+        spRenderer.size = new Vector2(abilityInformation.abilitySize, abilityInformation.abilitySize);
+        GetComponent<CircleCollider2D>().radius = abilityInformation.abilitySize;
         StartCoroutine(destroyAttack());
     }
 
@@ -23,7 +24,7 @@ public class StaticAttack : Ability
     {
         Health health = collision.transform.GetComponent<Health>();
         if (health == null) return;
-        if (!target.Contains(health))
+        if (!target.Contains(health) && health.getActorType() != this.userType)
         {
             health.decreaseHealth(abilityInformation.initialDamage, abilityInformation.damageOverTime, abilityInformation.tickTime);
             target.Add(health);

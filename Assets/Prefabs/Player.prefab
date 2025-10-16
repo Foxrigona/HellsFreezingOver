@@ -118,6 +118,7 @@ GameObject:
   - component: {fileID: 5943868381077694373}
   - component: {fileID: 5220105924948721465}
   - component: {fileID: 3283773925164850136}
+  - component: {fileID: 7828226902607777228}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -168,7 +169,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!58 &1586780833369288148
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -236,8 +237,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a76fa953809df3f4486b7f5a4b833759, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Aimer
-  cooldown: 1
-  bullet: {fileID: 9222702094462649171, guid: 0c6a220ee4153ea4a80678fd0ff36b53, type: 3}
+  cooldown: 0.1
+  projectilePrefab: {fileID: 2470140524257451280, guid: fd2e1b2a49013574ca9528373b0aef69, type: 3}
+  bulletData: {fileID: 11400000, guid: 517c003a3e49c3e4bb5909863df9e002, type: 2}
 --- !u!114 &3283773925164850136
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -250,6 +252,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24a61ef87c483e34cb859b4d32dd6d68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AbilityHandler
+  ability1: {fileID: 11400000, guid: f336a9acf7712634e844fb736cd83da9, type: 2}
+  ability2: {fileID: 11400000, guid: 900d1d18ecd04574f9f76c9c2176dd65, type: 2}
+  canUseAb1: 1
+  canUseAb2: 1
+  wallPrefab: {fileID: 2025253435377634756, guid: c831aa09770e0064fb24c0a9e709aed9, type: 3}
+  projectilePrefab: {fileID: 2470140524257451280, guid: fd2e1b2a49013574ca9528373b0aef69, type: 3}
+  staticAttackPrefab: {fileID: 6845998080089806146, guid: e426d12a6734fc947b4026acbdf5d792, type: 3}
+--- !u!114 &7828226902607777228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2362959764903194870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d068037ef0c3f384a8be7d2d0a93fa34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NormalHealth
+  maxHealth: 100
+  actorType: 0
 --- !u!1 &5067911902746440358
 GameObject:
   m_ObjectHideFlags: 0
@@ -328,7 +351,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0

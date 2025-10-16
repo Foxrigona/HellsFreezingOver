@@ -19,6 +19,7 @@ MonoBehaviour:
   initialDamage: 10
   damageOverTime: 0
   tickTime: 0
+  abilitySize: 3
   speed: 0
   duration: 2
   cooldown: 2

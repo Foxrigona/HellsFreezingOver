@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cf11d3a2d692804b8bb501399f78d7b, type: 3}
+  m_Name: Bullet
+  m_EditorClassIdentifier: Assembly-CSharp::AbilityScriptableObject
+  abilityName: Bullet
+  abilityDescription: Simple Projectile Moving in a Direction
+  abilityType: 0
+  abilitySprite: {fileID: -2285543539309634841, guid: 94e55b54b27398c47875c9c17ade0014, type: 3}
+  initialDamage: 2
+  damageOverTime: 0
+  tickTime: 0
+  abilitySize: 1
+  speed: 10
+  duration: 1
+  cooldown: 0.3

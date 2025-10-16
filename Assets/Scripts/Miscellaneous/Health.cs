@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class Health : MonoBehaviour
+public abstract class Health : MonoBehaviour
 {
     [SerializeField] private int maxHealth = 10;
     [SerializeField] private ActorType actorType;
@@ -12,11 +12,14 @@ public class Health : MonoBehaviour
         currentHealth = maxHealth;
     }
 
+    public ActorType getActorType()
+    {
+        return actorType;
+    }
+
     public void decreaseHealth(int damage)
     {
         currentHealth -= damage;
-        Debug.Log(currentHealth);
-
         if (currentHealth <= 0)
             kill();
     }
@@ -28,11 +31,7 @@ public class Health : MonoBehaviour
         StartCoroutine(dealTickDamage(tickDamage, tickSpeed));
     }
 
-    public void kill()
-    {
-        Debug.Log("IM DEAD");
-        Destroy(this.gameObject);
-    }
+    public abstract void kill();
 
     private IEnumerator dealTickDamage(int tickDamage, float tickSpeed)
     {
@@ -42,10 +41,9 @@ public class Health : MonoBehaviour
             yield return new WaitForSeconds(tickSpeed);
         }
     }
-
-    private enum ActorType
-    {
-        Rebel,
-        Enemy
-    }
+}
+public enum ActorType
+{
+    Rebel,
+    Enemy
 }

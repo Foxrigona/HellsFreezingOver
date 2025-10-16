@@ -7,19 +7,20 @@ using UnityEngine.InputSystem;
 public class Aimer : MonoBehaviour
 {
     [SerializeField] private float cooldown = 2f;
-    [SerializeField] private GameObject bullet;
-    private float currentCooldown;
+    [SerializeField] private GameObject projectilePrefab;
+    [SerializeField] private AbilityScriptableObject bulletData;
 
     private void Start()
     {
-        this.currentCooldown = this.cooldown;
         StartCoroutine(startShooting());
     }
 
     private void shoot()
     {
         Vector3 aimDirection = getAimDirection(this.transform.position);
-        Instantiate(bullet, this.transform.position + aimDirection, Quaternion.Euler(0, 0, Vector2.SignedAngle(Vector2.up, aimDirection)));
+        GameObject bullet = Instantiate(projectilePrefab, this.transform.position + aimDirection, Quaternion.Euler(0, 0, Vector2.SignedAngle(Vector2.up, aimDirection)));
+        bullet.GetComponent<Projectile>().setAbilityInformation(bulletData, ActorType.Rebel);
+        bullet.GetComponent<SpriteRenderer>().size = new Vector2(0.1f,0.5f);
     }
 
     public static Vector2 getAimDirection(Vector2 playerPosition, Vector2 aimPosition)
@@ -39,7 +40,7 @@ public class Aimer : MonoBehaviour
         while (true)
         {
             shoot();
-            yield return new WaitForSeconds(cooldown);
+            yield return new WaitForSeconds(this.cooldown);
         }
     }
 }

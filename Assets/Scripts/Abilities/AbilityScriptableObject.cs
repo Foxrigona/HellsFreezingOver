@@ -15,6 +15,7 @@ public class AbilityScriptableObject : ScriptableObject
     public int initialDamage;
     public int damageOverTime;
     public float tickTime;
+    public float abilitySize = 1f;
 
     [Header("Ability Functionality")]
     public float speed;
