@@ -9,7 +9,7 @@ public class Wall : Ability
         baker = FindFirstObjectByType<NavMeshBaker>();
         Debug.Log(GetComponent<Collider2D>());
     }
-    public void setAbilityInformation(AbilityScriptableObject ability, ActorType userType)
+    new public void setAbilityInformation(AbilityScriptableObject ability, ActorType userType)
     {
         base.setAbilityInformation(ability, userType);
         spRenderer.size = new Vector2(ability.abilitySize, spRenderer.size.y);

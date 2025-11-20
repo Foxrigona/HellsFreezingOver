@@ -6,8 +6,20 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Fighting Playground.unity
+    path: Assets/Scenes/Main Menu.unity
+    guid: 9564013270f4a0b4fae7baf89782e82b
+  - enabled: 1
+    path: Assets/Scenes/LEvel.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/Game OVer.unity
+    guid: e75883a85106c5347965bb6915f1d5e1
+  - enabled: 1
+    path: Assets/Scenes/Victory.unity
+    guid: dc2430f95cb1c9742b3eea2a0c556af3
+  - enabled: 1
+    path: Assets/Scenes/Instructions.unity
+    guid: e7560a010ebc2dc448a80b74d8c87b6d
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

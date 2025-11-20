@@ -6,7 +6,7 @@ using System.Collections.Generic;
 public class StaticAttack : Ability
 {
     private List<Health> target = new List<Health>();
-    public void setAbilityInformation(AbilityScriptableObject abilityInformation, ActorType userType)
+    new public void setAbilityInformation(AbilityScriptableObject abilityInformation, ActorType userType)
     {
         base.setAbilityInformation(abilityInformation, userType);
         spRenderer.size = new Vector2(abilityInformation.abilitySize, abilityInformation.abilitySize);

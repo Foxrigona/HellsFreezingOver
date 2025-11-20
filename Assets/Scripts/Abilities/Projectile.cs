@@ -7,7 +7,7 @@ public class Projectile : Ability
 {
     [SerializeField] private List<Health> targets;
     [SerializeField] private CircleCollider2D hitbox;
-    public void setAbilityInformation(AbilityScriptableObject abilityInformation, ActorType userType)
+    new public void setAbilityInformation(AbilityScriptableObject abilityInformation, ActorType userType)
     {
         base.setAbilityInformation(abilityInformation, userType);
         this.spRenderer.size = new Vector2(1, 1);

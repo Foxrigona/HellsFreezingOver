@@ -1,4 +1,5 @@
 using System.Drawing;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class AbilityHandlerEnemy : AbilityHandler
@@ -6,11 +7,9 @@ public class AbilityHandlerEnemy : AbilityHandler
     [SerializeField] private float detectionRadius = 10f;
     [SerializeField] private LayerMask enemyLayer;
     private Transform target;
-    private ActorType side;
-    private void Start()
+    new private void Start()
     {
         base.Start();
-
         canUseAb1 = false;
         canUseAb2 = false;
 
@@ -18,12 +17,12 @@ public class AbilityHandlerEnemy : AbilityHandler
         StartCoroutine(startCooldown(2, ability2));
 
         target = FindFirstObjectByType<Movement>().transform;
-        this.side = GetComponent<Health>().getActorType();
+        this.userType = GetComponent<Health>().getActorType();
     }
 
     private void Update()
     {
-        if ((canUseAb1 || canUseAb2) && this.side == ActorType.Rebel) this.target = FindTarget();
+        if ((canUseAb1 || canUseAb2) && this.userType == ActorType.Rebel) this.target = FindTarget();
         if (canUseAb1 && target != null)
         {
             float size = ability1.abilitySize;
@@ -36,6 +35,11 @@ public class AbilityHandlerEnemy : AbilityHandler
             canUseAb2 = false;
             useAbility(ability2, 2, transform.position, target.position + new Vector3(Random.Range(-size, size), Random.Range(-size, size)));
         }
+    }
+
+    public void updateSide(ActorType actorType)
+    {
+        this.userType = actorType;
     }
 
     private Transform FindTarget()

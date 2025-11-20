@@ -3,13 +3,20 @@ using UnityEngine;
 
 public abstract class Health : MonoBehaviour
 {
-    [SerializeField] private int maxHealth = 10;
-    [SerializeField] private ActorType actorType;
-    private int currentHealth;
+    [SerializeField] protected float maxHealth = 10;
+    [SerializeField] protected ActorType actorType;
+    protected float currentHealth;
+    protected HealthUpdater healthUpdater;
 
     private void Awake()
     {
         currentHealth = maxHealth;
+        if(this is PlayerHealth) healthUpdater = FindFirstObjectByType<HealthUpdater>();
+    }
+
+    public void setActorType(ActorType actorType)
+    {
+        this.actorType = actorType;
     }
 
     public ActorType getActorType()
@@ -17,14 +24,15 @@ public abstract class Health : MonoBehaviour
         return actorType;
     }
 
-    public void decreaseHealth(int damage)
+    public virtual void decreaseHealth(float damage)
     {
         currentHealth -= damage;
+        if (this is PlayerHealth) healthUpdater.updateDisplay((int)this.currentHealth, (int)this.maxHealth);
         if (currentHealth <= 0)
             kill();
     }
 
-    public void decreaseHealth(int initialDamage, int tickDamage, float tickSpeed)
+    public virtual void decreaseHealth(float initialDamage, float tickDamage, float tickSpeed)
     {
         decreaseHealth(initialDamage);
         if (tickDamage == 0 && tickSpeed == 0) return;
@@ -33,7 +41,7 @@ public abstract class Health : MonoBehaviour
 
     public abstract void kill();
 
-    private IEnumerator dealTickDamage(int tickDamage, float tickSpeed)
+    private IEnumerator dealTickDamage(float tickDamage, float tickSpeed)
     {
         for(int i = 0; i < 4; i++)
         {

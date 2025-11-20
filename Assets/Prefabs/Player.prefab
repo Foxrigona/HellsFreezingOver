@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1082153913908906760}
   - component: {fileID: 1522749493542129897}
   - component: {fileID: 2267911730242730975}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Aimer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -118,8 +118,8 @@ GameObject:
   - component: {fileID: 5943868381077694373}
   - component: {fileID: 5220105924948721465}
   - component: {fileID: 3283773925164850136}
-  - component: {fileID: 7828226902607777228}
-  m_Layer: 0
+  - component: {fileID: 2426500741758264876}
+  m_Layer: 8
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -237,9 +237,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a76fa953809df3f4486b7f5a4b833759, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Aimer
-  cooldown: 0.1
+  cooldown: 0.3
   projectilePrefab: {fileID: 2470140524257451280, guid: fd2e1b2a49013574ca9528373b0aef69, type: 3}
   bulletData: {fileID: 11400000, guid: 517c003a3e49c3e4bb5909863df9e002, type: 2}
+  bulletsPerShot: 1
+  offsetAngle: 30
 --- !u!114 &3283773925164850136
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -259,7 +261,7 @@ MonoBehaviour:
   wallPrefab: {fileID: 2025253435377634756, guid: c831aa09770e0064fb24c0a9e709aed9, type: 3}
   projectilePrefab: {fileID: 2470140524257451280, guid: fd2e1b2a49013574ca9528373b0aef69, type: 3}
   staticAttackPrefab: {fileID: 6845998080089806146, guid: e426d12a6734fc947b4026acbdf5d792, type: 3}
---- !u!114 &7828226902607777228
+--- !u!114 &2426500741758264876
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -268,9 +270,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 2362959764903194870}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d068037ef0c3f384a8be7d2d0a93fa34, type: 3}
+  m_Script: {fileID: 11500000, guid: ef445ef71397c3544a291676dfd169b6, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::NormalHealth
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
   maxHealth: 100
   actorType: 0
 --- !u!1 &5067911902746440358
@@ -283,7 +285,7 @@ GameObject:
   m_Component:
   - component: {fileID: 633922841354076256}
   - component: {fileID: 5577301578621451508}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Character
   m_TagString: Untagged
   m_Icon: {fileID: 0}

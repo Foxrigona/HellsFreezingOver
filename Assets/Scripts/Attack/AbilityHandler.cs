@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Net.NetworkInformation;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 public class AbilityHandler : MonoBehaviour
 {
@@ -13,6 +14,8 @@ public class AbilityHandler : MonoBehaviour
     [SerializeField] protected GameObject projectilePrefab;
     [SerializeField] protected GameObject staticAttackPrefab;
 
+    public static UnityEvent<int, bool> abilityUsed = new UnityEvent<int, bool>();
+
     protected ActorType userType;
     protected void Start()
     {
@@ -21,6 +24,8 @@ public class AbilityHandler : MonoBehaviour
 
     protected void useAbility(AbilityScriptableObject ability, int abilityNumber,Vector2 userPosition, Vector2 targetPosition)
     {
+        if (this is AbilityHandlerPlayer)
+            abilityUsed.Invoke(abilityNumber, true);
         if (ability == null) return;
         if (ability.abilityType == AbilityTypes.Wall)
         {
@@ -43,10 +48,16 @@ public class AbilityHandler : MonoBehaviour
         StartCoroutine(startCooldown(abilityNumber, ability));
     }
 
+    public AbilityScriptableObject[] getAbilties()
+    {
+        return new AbilityScriptableObject[] { ability1, ability2 };
+    }
+
     protected IEnumerator startCooldown(int abilityNum, AbilityScriptableObject abilityInformation)
     {
         yield return new WaitForSeconds(abilityInformation.cooldown);
         if (abilityNum == 1) canUseAb1 = true;
         else if (abilityNum == 2) canUseAb2 = true;
+        abilityUsed.Invoke(abilityNum, false);
     }
 }
