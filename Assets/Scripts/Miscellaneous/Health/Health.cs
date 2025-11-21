@@ -14,6 +14,22 @@ public abstract class Health : MonoBehaviour
         if(this is PlayerHealth) healthUpdater = FindFirstObjectByType<HealthUpdater>();
     }
 
+    public float getMaxHealth()
+    {
+        return this.maxHealth;
+    }
+
+    public void recoverHealth(int amt)
+    {
+        this.currentHealth += amt;
+        if(this.currentHealth > maxHealth) this.currentHealth = maxHealth;
+    }
+
+    public virtual void setMaxHealth(int newMaxHealth)
+    {
+        this.maxHealth = newMaxHealth;
+    }
+
     public void OnEnable()
     {
         this.currentHealth = this.maxHealth;
@@ -32,7 +48,6 @@ public abstract class Health : MonoBehaviour
     public virtual void decreaseHealth(float damage)
     {
         currentHealth -= damage;
-        if (this is PlayerHealth) healthUpdater.updateDisplay((int)this.currentHealth, (int)this.maxHealth);
         if (currentHealth <= 0)
             kill();
     }

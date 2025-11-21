@@ -38,19 +38,9 @@ public class ChoicePanelHandler : MonoBehaviour
     public void setChoiceType(MonoBehaviour caller)
     {
         //Set card 1, set card 2
-        if (caller is UpgradeScroll)
+        foreach (Transform child in transform)
         {
-            foreach (Transform child in transform)
-            {
-                child.GetComponent<CardHandler>().setDecision(caller);
-            }
-        }
-        else if (caller is WildRogueHealth)
-        {
-            foreach (Transform child in transform)
-            {
-                child.GetComponent<CardHandler>().setDecision(caller);
-            }
+            child.GetComponent<CardHandler>().setDecision(caller);
         }
     }
 }
