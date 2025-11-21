@@ -7,4 +7,5 @@ public class EnemyStats : ScriptableObject
     public int damage;
     public float hitDelay;
     public float speed;
+    public int demonEssenceValue;
 }

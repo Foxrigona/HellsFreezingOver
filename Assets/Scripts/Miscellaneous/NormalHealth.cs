@@ -2,8 +2,19 @@ using UnityEngine;
 
 public class NormalHealth :Health
 {
+    private int demonEssenceValue;
+
+    public void Start()
+    {
+        demonEssenceValue = GetComponent<EnemyAttack>().getDemonEssenceValue();
+    }
+
+    
+
     public override void kill()
     {
-        Destroy(this.gameObject);
+        FindFirstObjectByType<EnemySpawner>().changePool(this.transform, true);
+        EnemyKillHandler.enemyKilled.Invoke(this.demonEssenceValue);
+        gameObject.SetActive(false);
     }
 }

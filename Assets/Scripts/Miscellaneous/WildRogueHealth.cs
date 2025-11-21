@@ -4,6 +4,7 @@ public class WildRogueHealth : Health
 {
     private ChoicePanelHandler panel;
     private bool hasDied = false;
+    private bool decisionMade = false;
 
     private void Start()
     {
@@ -11,10 +12,10 @@ public class WildRogueHealth : Health
     }
     override public void kill()
     {
-        if (hasDied) Destroy(this.gameObject);
+        if (hasDied && this.decisionMade) Destroy(this.gameObject);
 
-        panel.toggleChoicePanel(true);
-        panel.setChoiceType(this);
+        if (!hasDied) panel.toggleChoicePanel(true);
+        if (!hasDied) panel.setChoiceType(this);
 
         this.hasDied = true;
     }
@@ -23,6 +24,8 @@ public class WildRogueHealth : Health
     {
         if (choice == 0) becomeAlly();
         else givePlayerAbilities();
+
+        this.decisionMade = true;
     }
 
     private void givePlayerAbilities()

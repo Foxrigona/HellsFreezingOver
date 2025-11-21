@@ -14,6 +14,11 @@ public abstract class Health : MonoBehaviour
         if(this is PlayerHealth) healthUpdater = FindFirstObjectByType<HealthUpdater>();
     }
 
+    public void OnEnable()
+    {
+        this.currentHealth = this.maxHealth;
+    }
+
     public void setActorType(ActorType actorType)
     {
         this.actorType = actorType;

@@ -6,10 +6,11 @@ public class PlayerHealth : Health
 {
     [SerializeField] private float damageCooldown = 1f;
     private bool isInvincible = false;
+    private PlayerVisualizer playerVisualizer;
 
     public void Start()
     {
-        
+        playerVisualizer = GetComponentInChildren<PlayerVisualizer>();
     }
 
     public override void kill()
@@ -23,6 +24,7 @@ public class PlayerHealth : Health
         {
             base.decreaseHealth(damage);
             StartCoroutine(startDamageCooldown());
+            playerVisualizer.visualizeDamage();
         }
             
     }

@@ -8,14 +8,19 @@ public class EnemyAttack : MonoBehaviour
     [SerializeField] EnemyStats stats;
     private float damage;
     private float hitDelay;
+    private int demonEssenceValue;
     private bool isPaused = true;
     private Health targetHealth;
 
-    private void Start()
+    private void Awake()
     {
         this.damage = this.stats.damage + Random.Range(-0.5f, 2f);
         this.hitDelay = this.stats.hitDelay;
+        this.demonEssenceValue = stats.demonEssenceValue;
         this.GetComponent<NavMeshAgent>().speed = stats.speed + Random.Range(-0.5f,2f);
+    }
+    private void Start()
+    {
         StartCoroutine(damagePlayer());
     }
 
@@ -23,6 +28,12 @@ public class EnemyAttack : MonoBehaviour
     {
         this.damage += waveNumber*0.5f - 0.5f;
         this.GetComponent<NavMeshAgent>().speed += waveNumber * 1.5f;
+    }
+
+    public int getDemonEssenceValue()
+    {
+        Debug.Log(this.demonEssenceValue);
+        return this.demonEssenceValue;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

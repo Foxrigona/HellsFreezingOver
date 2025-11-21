@@ -9,6 +9,10 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] List<int> enemyTypeChance = new List<int>();
     [SerializeField] List<GameObject> rogueTypes = new List<GameObject>();
 
+    [SerializeField] List<List<Transform>> deadEnemyPools = new List<List<Transform>>();
+    [SerializeField] List<List<Transform>> livingEnemyPools = new List<List<Transform>>();
+    [SerializeField] List<int> poolSizes = new List<int>();
+
     [SerializeField] private int waveNumber = 1;
     [SerializeField] private int bossWaveInterval = 3;
     [SerializeField] private int enemyIncrement = 5;
@@ -25,7 +29,23 @@ public class EnemySpawner : MonoBehaviour
 
     private void Start()
     {
+        populateEnemyPools();
         StartCoroutine(startSpawning());
+    }
+
+    private void populateEnemyPools()
+    {
+        for(int i = 0; i < poolSizes.Count; i++)
+        {
+            deadEnemyPools.Add(new List<Transform>());
+            livingEnemyPools.Add(new List<Transform>());
+            for(int enemyCount = 0; enemyCount < poolSizes[i]; enemyCount++)
+            {
+                GameObject enemy = Instantiate(enemyTypes[i], Vector3.zero, Quaternion.identity);
+                enemy.SetActive(false);
+                deadEnemyPools[i].Add(enemy.transform);
+            }
+        }
     }
 
     private void spawnEnemies(int enemyCount)
@@ -60,12 +80,40 @@ public class EnemySpawner : MonoBehaviour
 
             Vector2 spawnPosition = player.position + new Vector3(Random.Range(5, 15) * spawnDirX, Random.Range(5, 15) * spawnDirY, 0);
 
+            GameObject e = null;
             //Instantiate enemy
-            GameObject e = Instantiate(enemyTypes[enemyType], spawnPosition, Quaternion.identity);
+            if (enemyType == 0)
+            {
+                e = deadEnemyPools[0][0].gameObject;
+            }
+            else if (enemyType == 1)
+            {
+                e = deadEnemyPools[1][0].gameObject;
+            }
+            e.transform.position = spawnPosition;
+            e.SetActive(true);
+            this.changePool(e.transform, false);
             e.GetComponent<EnemyAttack>().alterStats(currentWave);
         }    
     }
 
+    public void changePool(Transform enemy, bool isDead)
+    {
+        Health enemyType = enemy.GetComponent<Health>();
+        int pool = 0;
+        if (enemyType is NormalHealth) pool = 0;
+        if (enemyType is StrongDemonHealth) pool = 1;
+        if (isDead)
+        {
+            livingEnemyPools[pool].Remove(enemy);
+            deadEnemyPools[pool].Add(enemy);
+        }
+        else
+        {
+            deadEnemyPools[pool].Remove(enemy);
+            livingEnemyPools[pool].Add(enemy);
+        }
+    }
     private void spawnRogue(int i)
     {
         int spawnDirX;

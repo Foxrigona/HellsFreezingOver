@@ -119,6 +119,7 @@ GameObject:
   - component: {fileID: 5220105924948721465}
   - component: {fileID: 3283773925164850136}
   - component: {fileID: 2426500741758264876}
+  - component: {fileID: 8563898993760803438}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -254,8 +255,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24a61ef87c483e34cb859b4d32dd6d68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AbilityHandler
-  ability1: {fileID: 11400000, guid: f336a9acf7712634e844fb736cd83da9, type: 2}
-  ability2: {fileID: 11400000, guid: 900d1d18ecd04574f9f76c9c2176dd65, type: 2}
+  ability1: {fileID: 0}
+  ability2: {fileID: 0}
   canUseAb1: 1
   canUseAb2: 1
   wallPrefab: {fileID: 2025253435377634756, guid: c831aa09770e0064fb24c0a9e709aed9, type: 3}
@@ -273,8 +274,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef445ef71397c3544a291676dfd169b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
-  maxHealth: 100
+  maxHealth: 150
   actorType: 0
+  damageCooldown: 0.2
+--- !u!114 &8563898993760803438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2362959764903194870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fd57e9c82bb1444eb913d26d38e721e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyKillHandler
+  enemiesKilled: 0
+  demonEssenceCount: 20
 --- !u!1 &5067911902746440358
 GameObject:
   m_ObjectHideFlags: 0
@@ -285,6 +301,7 @@ GameObject:
   m_Component:
   - component: {fileID: 633922841354076256}
   - component: {fileID: 5577301578621451508}
+  - component: {fileID: 2056695471837025155}
   m_Layer: 8
   m_Name: Character
   m_TagString: Untagged
@@ -365,3 +382,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2056695471837025155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5067911902746440358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bdf392a41ea6fc45850c8c1c0faede5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  damageDuration: 0.1
+  baseColor: {r: 0, g: 0, b: 0, a: 1}
+  damagedColor: {r: 1, g: 0, b: 0, a: 1}
