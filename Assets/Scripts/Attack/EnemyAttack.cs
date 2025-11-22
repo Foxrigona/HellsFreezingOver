@@ -19,8 +19,10 @@ public class EnemyAttack : MonoBehaviour
         this.demonEssenceValue = stats.demonEssenceValue;
         this.GetComponent<NavMeshAgent>().speed = stats.speed + Random.Range(-0.5f,2f);
     }
-    private void Start()
+
+    private void OnEnable()
     {
+        this.targetHealth = null;
         StartCoroutine(damagePlayer());
     }
 
@@ -43,6 +45,7 @@ public class EnemyAttack : MonoBehaviour
         {
             this.targetHealth = h;
             this.isPaused = false;
+            Debug.Log("TAKE THIS " + this.targetHealth.transform.name);
         }
 
     }
@@ -57,6 +60,7 @@ public class EnemyAttack : MonoBehaviour
     {
         while (true)
         {
+            Debug.Log(this.targetHealth);
             while (this.isPaused) yield return null;
             this.targetHealth.decreaseHealth(this.damage);
             yield return new WaitForSeconds(this.hitDelay);
