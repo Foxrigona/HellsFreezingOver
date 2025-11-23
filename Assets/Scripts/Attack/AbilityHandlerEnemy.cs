@@ -27,13 +27,13 @@ public class AbilityHandlerEnemy : AbilityHandler
         {
             float size = ability1.abilitySize;
             canUseAb1 = false;
-            useAbility(ability1, 1, transform.position, target.position + new Vector3(Random.Range(-size,size), Random.Range(-size, size)));
+            useAbility(ability1, 1, transform.position, target.position);
         }
         if (canUseAb2 && target != null)
         {
             float size = ability2.abilitySize;
             canUseAb2 = false;
-            useAbility(ability2, 2, transform.position, target.position + new Vector3(Random.Range(-size, size), Random.Range(-size, size)));
+            useAbility(ability2, 2, transform.position, target.position);
         }
     }
 

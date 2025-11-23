@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 93fdddf89bab80247a1e6f401bdcfdb6, type: 3}
-  m_Name: Base Enemy
+  m_Name: Final Boss
   m_EditorClassIdentifier: Assembly-CSharp::EnemyStats
-  health: 5
-  damage: 2
+  health: 250
+  damage: 10
   hitDelay: 1
-  speed: 4
-  demonEssenceValue: 2
+  speed: 10
+  demonEssenceValue: 100

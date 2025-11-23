@@ -47,13 +47,11 @@ MonoBehaviour:
   enemyTypes:
   - {fileID: 4437836376781913770, guid: 31909d05615c3cc4da989eb9654d2d48, type: 3}
   - {fileID: 9124576604210171727, guid: 39477b088078a624b8b1e7d2f5d146d2, type: 3}
-  enemyTypeChance: 5f00000005000000
-  rogueTypes:
-  - {fileID: 2985932502626730364, guid: efb555545e1297245b4792a4fee53c2f, type: 3}
-  - {fileID: 9190894782738142804, guid: 421fe568cb00011488b59c4c671f0337, type: 3}
+  enemyTypeChance: 6200000002000000
+  poolSizes: 6400000064000000
   waveNumber: 1
-  bossWaveInterval: 2
-  enemyIncrement: 5
+  bossWaveInterval: 4
+  enemyIncrement: 3
   initialEnemycount: 10
   waveDelay: 10
-  waveCount: 10
+  waveCount: 9

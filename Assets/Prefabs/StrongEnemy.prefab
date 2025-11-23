@@ -100,4 +100,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::StrongDemonHealth
   maxHealth: 10
   actorType: 1
+  stats: {fileID: 11400000, guid: 836016ce4d57fab418c2b8e537388006, type: 2}
   scroll: {fileID: 3189103251124725649, guid: fe0ade82e95cf48459eca22eeef4c05a, type: 3}

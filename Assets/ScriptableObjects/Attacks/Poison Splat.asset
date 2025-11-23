@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cf11d3a2d692804b8bb501399f78d7b, type: 3}
+  m_Name: Poison Splat
+  m_EditorClassIdentifier: Assembly-CSharp::AbilityScriptableObject
+  abilityName: Poison splat
+  abilityDescription: Shoot poison under the enemies feet, doing damage over time
+  abilityType: 1
+  abilitySprite: {fileID: 1749405755195523700, guid: 14a2f22aaf8be53498eaff7b28d43c40, type: 3}
+  initialDamage: 2
+  damageOverTime: 2
+  tickTime: 0.5
+  abilitySize: 4
+  speed: 0
+  duration: 4
+  cooldown: 3

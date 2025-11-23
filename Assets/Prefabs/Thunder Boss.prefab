@@ -1,0 +1,128 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &8965990542148862128
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1160001903993472482, guid: 7b56abac21edb6f4ea5f7b8c673d2634, type: 3}
+      propertyPath: ability1
+      value: 
+      objectReference: {fileID: 11400000, guid: 78a8cc2db29a35a4aaa8dee39c3b92f6, type: 2}
+    - target: {fileID: 1160001903993472482, guid: 7b56abac21edb6f4ea5f7b8c673d2634, type: 3}
+      propertyPath: ability2
+      value: 
+      objectReference: {fileID: 11400000, guid: d09082ec2f36182479b3adf0b8f396f8, type: 2}
+    - target: {fileID: 1160001903993472482, guid: 7b56abac21edb6f4ea5f7b8c673d2634, type: 3}
+      propertyPath: enemyLayer.m_Bits
+      value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 3468840718348040202, guid: 7b56abac21edb6f4ea5f7b8c673d2634, type: 3}
+      propertyPath: stoppingDistance
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4510878317847457910, guid: 7b56abac21edb6f4ea5f7b8c673d2634, type: 3}
+      propertyPath: m_Name
+      value: Thunder Boss
+      objectReference: {fileID: 0}
+    - target: {fileID: 4566207725116247806, guid: 7b56abac21edb6f4ea5f7b8c673d2634, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4566207725116247806, guid: 7b56abac21edb6f4ea5f7b8c673d2634, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4566207725116247806, guid: 7b56abac21edb6f4ea5f7b8c673d2634, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4566207725116247806, guid: 7b56abac21edb6f4ea5f7b8c673d2634, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4566207725116247806, guid: 7b56abac21edb6f4ea5f7b8c673d2634, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4566207725116247806, guid: 7b56abac21edb6f4ea5f7b8c673d2634, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4566207725116247806, guid: 7b56abac21edb6f4ea5f7b8c673d2634, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4566207725116247806, guid: 7b56abac21edb6f4ea5f7b8c673d2634, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4566207725116247806, guid: 7b56abac21edb6f4ea5f7b8c673d2634, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4566207725116247806, guid: 7b56abac21edb6f4ea5f7b8c673d2634, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4756986469493596491, guid: 7b56abac21edb6f4ea5f7b8c673d2634, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4756986469493596491, guid: 7b56abac21edb6f4ea5f7b8c673d2634, type: 3}
+      propertyPath: m_Color.g
+      value: 0.495283
+      objectReference: {fileID: 0}
+    - target: {fileID: 4756986469493596491, guid: 7b56abac21edb6f4ea5f7b8c673d2634, type: 3}
+      propertyPath: m_Color.r
+      value: 0.8358446
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 24769080697052449, guid: 7b56abac21edb6f4ea5f7b8c673d2634, type: 3}
+    - {fileID: 6674719675183068760, guid: 7b56abac21edb6f4ea5f7b8c673d2634, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4510878317847457910, guid: 7b56abac21edb6f4ea5f7b8c673d2634, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3944221951737556404}
+    - targetCorrespondingSourceObject: {fileID: 4510878317847457910, guid: 7b56abac21edb6f4ea5f7b8c673d2634, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -2524002829604296733}
+  m_SourcePrefab: {fileID: 100100000, guid: 7b56abac21edb6f4ea5f7b8c673d2634, type: 3}
+--- !u!1 &4824554814740672710 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4510878317847457910, guid: 7b56abac21edb6f4ea5f7b8c673d2634, type: 3}
+  m_PrefabInstance: {fileID: 8965990542148862128}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3944221951737556404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4824554814740672710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0a6460723d518b45990c6375ccfe410, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyAttack
+  stats: {fileID: 11400000, guid: 1a991d7ce87ea524ba625a1486a95a5c, type: 2}
+--- !u!114 &-2524002829604296733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4824554814740672710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c99c50571ea63b478239029d2f4dbf9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FinalBossHealth
+  maxHealth: 10
+  actorType: 1
+  stats: {fileID: 11400000, guid: 1a991d7ce87ea524ba625a1486a95a5c, type: 2}

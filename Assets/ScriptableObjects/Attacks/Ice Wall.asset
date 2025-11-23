@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1cf11d3a2d692804b8bb501399f78d7b, type: 3}
-  m_Name: Bullet
+  m_Name: Ice Wall
   m_EditorClassIdentifier: Assembly-CSharp::AbilityScriptableObject
-  abilityName: Bullet
-  abilityDescription: Simple Projectile Moving in a Direction
-  abilityType: 0
-  abilitySprite: {fileID: -2285543539309634841, guid: 94e55b54b27398c47875c9c17ade0014, type: 3}
-  initialDamage: 2
+  abilityName: Ice Wall
+  abilityDescription: Summons an ice wall at the current cursor position.
+  abilityType: 2
+  abilitySprite: {fileID: -9037892231084333765, guid: 458f5ee87af5184439b652fa964e6012, type: 3}
+  initialDamage: 0
   damageOverTime: 0
   tickTime: 0
-  abilitySize: 1
-  speed: 10
-  duration: 1
-  cooldown: 0.3
+  abilitySize: 5
+  speed: 0
+  duration: 5
+  cooldown: 3

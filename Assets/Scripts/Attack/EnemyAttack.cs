@@ -11,12 +11,14 @@ public class EnemyAttack : MonoBehaviour
     private int demonEssenceValue;
     private bool isPaused = true;
     private Health targetHealth;
+    private Health health;
 
     private void Awake()
     {
         this.damage = this.stats.damage + Random.Range(-0.5f, 2f);
         this.hitDelay = this.stats.hitDelay;
         this.demonEssenceValue = stats.demonEssenceValue;
+        this.health = GetComponent<Health>();
         this.GetComponent<NavMeshAgent>().speed = stats.speed + Random.Range(-0.5f,2f);
     }
 
@@ -28,8 +30,10 @@ public class EnemyAttack : MonoBehaviour
 
     public void alterStats(int waveNumber)
     {
-        this.damage += waveNumber*0.5f - 0.5f;
-        this.GetComponent<NavMeshAgent>().speed += waveNumber * 1.5f;
+        this.health.setMaxHealth(this.stats.health + Mathf.FloorToInt(waveNumber * 1));
+        Debug.Log(this.health.getMaxHealth());
+        this.damage = stats.damage + waveNumber * 2;
+        this.GetComponent<NavMeshAgent>().speed = stats.speed + waveNumber * 0.5f;
     }
 
     public int getDemonEssenceValue()

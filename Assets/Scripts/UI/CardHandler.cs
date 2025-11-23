@@ -6,6 +6,7 @@ public class CardHandler : MonoBehaviour
     [SerializeField] private int cardNum = 1;
     private MonoBehaviour caller;
     private TextMeshProUGUI textBox;
+    private int choice;
 
     private void Awake()
     {
@@ -14,16 +15,20 @@ public class CardHandler : MonoBehaviour
 
     public void setDecision(MonoBehaviour caller)
     {
+        choice = Random.Range(0, 2);
+
         this.caller = caller;
         if (caller is UpgradeScroll)
         {
             if (this.cardNum == 1)
             {
-                this.textBox.text = "THIS IS COOLDOWN";
+                if (choice == 0) this.textBox.text = "THIS IS COOLDOWN";
+                else if (choice == 1) this.textBox.text = "INCREASE MOVEMENT SPEED";
             }
             else if (this.cardNum == 2)
             {
-                this.textBox.text = "THIS IS BULLET RANGE";
+                if (choice == 0) this.textBox.text = "THIS IS BULLET RANGE";
+                else if (choice == 1) this.textBox.text = "INCREASE DASH SPEED";
             }
         }
 
@@ -58,7 +63,7 @@ public class CardHandler : MonoBehaviour
         if(caller is UpgradeScroll)
         {
             UpgradeScroll scroll = (UpgradeScroll) caller;
-            scroll.triggerUpgrade(cardNum - 1);
+            scroll.triggerUpgrade(cardNum + this.choice * 2 - 1);
         }
         if(caller is WildRogueHealth)
         {

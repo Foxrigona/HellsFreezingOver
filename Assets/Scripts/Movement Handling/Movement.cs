@@ -1,13 +1,17 @@
 using System.Collections;
+using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System.Collections.Generic;
+
 [RequireComponent(typeof(Rigidbody2D))]
 public class Movement : MonoBehaviour
 {
     [SerializeField] private float acceleration = 5f;
     [SerializeField] private float maxSpeed = 10f;
     [SerializeField] private float dashFactor = 2f;
-    [SerializeField] private float dashSpeed = 0.5f;
+    [SerializeField] private float dashSpeed = 10f;
+    [SerializeField] private float dashTime = 0.1f;
     [SerializeField] private float dashCooldown = 2f;
     [SerializeField] private bool canDash = true;
     [SerializeField] private bool isDashing = false;
@@ -24,6 +28,10 @@ public class Movement : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        
+        UpgradeHandler upgradeHandler = FindFirstObjectByType<UpgradeHandler>();
+        upgradeHandler.moveSpeedUpgrade.AddListener(this.increaseSpeed);
+        upgradeHandler.dashSpeedUpgrade.AddListener(this.increaseDashSpeed);
     }
 
     private void Update()
@@ -41,12 +49,7 @@ public class Movement : MonoBehaviour
         //Apply the force to the object
         this.rb.AddForce(force * this.acceleration);
 
-        //Cap the velocity
-        if (velocity.magnitude > this.maxSpeed && !isDashing) this.rb.linearVelocity = velocity * this.maxSpeed/velocity.magnitude;
-
-        //Turn the X component to 0 if off and same to Y
-        if (force.x == 0f) this.rb.linearVelocityX = 0;
-        if (force.y == 0f) this.rb.linearVelocityY = 0;
+        this.rb.linearVelocity = new Vector2(force.x, force.y) * this.maxSpeed;
     }
     //TODO: Allow character to dash(can be teleport) when shift is pressed
 
@@ -54,15 +57,46 @@ public class Movement : MonoBehaviour
     {
         this.isDashing = true;
         this.canDash = false;
-        this.rb.linearVelocity *= this.maxSpeed * this.dashFactor;
+        this.rb.linearVelocity *= this.dashSpeed * this.dashFactor;
         StartCoroutine(startDash());
+    }
+
+    public void increaseSpeed(float speed)
+    {
+        this.maxSpeed += speed;
+        NPCMovement[] allies = this.findAllies();
+        foreach (NPCMovement ally in findAllies())
+        {
+            ally.increaseSpeed(speed);
+        }
+    }
+
+    public float getSpeed()
+    {
+        return this.maxSpeed;
+    }
+
+    public void increaseDashSpeed(float speedIncrement)
+    {
+        this.dashSpeed += speedIncrement;
+    }
+
+    private NPCMovement[] findAllies()
+    {
+        WildRogueHealth[] health = FindObjectsByType<WildRogueHealth>(FindObjectsSortMode.None);
+        List<NPCMovement> allies = new List<NPCMovement>();
+        foreach (WildRogueHealth rogue in health)
+        {
+            if(rogue.getActorType() == ActorType.Rebel) allies.Add(rogue.transform.GetComponent<NPCMovement>());
+        }
+        return allies.ToArray();
     }
 
     IEnumerator startDash()
     {
-        yield return new WaitForSeconds(dashSpeed);
+        yield return new WaitForSeconds(this.dashTime);
         this.isDashing = false;
-        yield return new WaitForSeconds(dashCooldown - dashSpeed);
+        yield return new WaitForSeconds(dashCooldown - this.dashTime);
         this.canDash = true;        
     }
 }

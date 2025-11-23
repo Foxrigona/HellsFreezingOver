@@ -95,7 +95,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c3b7c2b01a6f4943a84aa96a5f49d16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCMovement
-  stoppingDistance: 0
+  stoppingDistance: 1
   detectionRadius: 30
 --- !u!195 &3679012704757045378
 NavMeshAgent:
@@ -108,7 +108,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 0.5
   m_Speed: 5
-  m_Acceleration: 8
+  m_Acceleration: 15
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -133,6 +133,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NormalHealth
   maxHealth: 10
   actorType: 1
+  stats: {fileID: 11400000, guid: a8e8fc27eead405429fb1ec888d42424, type: 2}
 --- !u!114 &6934160826731214679
 MonoBehaviour:
   m_ObjectHideFlags: 0

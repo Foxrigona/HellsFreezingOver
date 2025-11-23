@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1cf11d3a2d692804b8bb501399f78d7b, type: 3}
-  m_Name: Ice Spikes
+  m_Name: Lightning Strike
   m_EditorClassIdentifier: Assembly-CSharp::AbilityScriptableObject
-  abilityName: Ice Spike
-  abilityDescription: Blasts ice from underneat the enemies feet, impaling them.
+  abilityName: Thors Wrath
+  abilityDescription: Summon a bolt of lightning onto the enemy dealing massive damage
   abilityType: 1
-  abilitySprite: {fileID: 2798690672546356915, guid: 26367dec943762945a9e2994714ea419, type: 3}
-  initialDamage: 10
+  abilitySprite: {fileID: 3563442364487752361, guid: 9a7d4db5a58ed794bb447168307cd2e4, type: 3}
+  initialDamage: 40
   damageOverTime: 0
   tickTime: 0
   abilitySize: 3
   speed: 0
-  duration: 2
-  cooldown: 2
+  duration: 0.2
+  cooldown: 5

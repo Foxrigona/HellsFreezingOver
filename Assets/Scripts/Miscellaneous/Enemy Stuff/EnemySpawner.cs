@@ -7,7 +7,6 @@ public class EnemySpawner : MonoBehaviour
 {
     [SerializeField] List<GameObject> enemyTypes = new List<GameObject>();
     [SerializeField] List<int> enemyTypeChance = new List<int>();
-    [SerializeField] List<GameObject> rogueTypes = new List<GameObject>();
 
     [SerializeField] List<List<Transform>> deadEnemyPools = new List<List<Transform>>();
     [SerializeField] List<List<Transform>> livingEnemyPools = new List<List<Transform>>();
@@ -15,7 +14,7 @@ public class EnemySpawner : MonoBehaviour
 
     [SerializeField] private int waveNumber = 1;
     [SerializeField] private int bossWaveInterval = 3;
-    [SerializeField] private int enemyIncrement = 5;
+    [SerializeField] private int enemyIncrement = 2;
     [SerializeField] private int initialEnemycount = 10;
     [SerializeField] private int waveDelay = 10;
     [SerializeField] private int waveCount = 5;
@@ -114,32 +113,14 @@ public class EnemySpawner : MonoBehaviour
             livingEnemyPools[pool].Add(enemy);
         }
     }
-    private void spawnRogue(int i)
-    {
-        int spawnDirX;
-        if (Random.Range(0, 2) == 0) spawnDirX = 1;
-        else spawnDirX = -1;
-
-        int spawnDirY;
-        if (Random.Range(0, 2) == 0) spawnDirY = 1;
-        else spawnDirY = -1;
-
-        Vector2 spawnPosition = player.position + new Vector3(Random.Range(5, 15) * spawnDirX, Random.Range(5, 15) * spawnDirY, 0);
-
-        Instantiate(rogueTypes[i], spawnPosition, Quaternion.identity);
-    }
 
     private IEnumerator startSpawning()
     {
         for (int i = 0; i < waveCount; i++)
         {
-            if(i%bossWaveInterval != 0 || i == 0)
-                spawnEnemies(initialEnemycount + i * enemyIncrement);
-            else
-                spawnRogue(i/bossWaveInterval-1);
-            waveNumber++;
+            spawnEnemies(initialEnemycount + i * enemyIncrement);
+            this.currentWave += 1;
             yield return new WaitForSeconds(waveDelay);
         }
-        SceneManager.LoadScene(3);
     }
 }

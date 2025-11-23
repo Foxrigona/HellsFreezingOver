@@ -31,6 +31,11 @@ public class NPCMovement : MonoBehaviour
         this.target = findTarget();
     }
 
+    public void setSpeed(float speed)
+    {
+        this.agent.speed = speed;
+    }
+
     private Transform findTarget()
     {
         if (actorType == ActorType.Rebel) return FindFirstObjectByType<Movement>().transform;
@@ -40,6 +45,11 @@ public class NPCMovement : MonoBehaviour
             if (targetColliders.Length == 0) return null;
             return targetColliders[Random.Range(0, targetColliders.Length)].transform;
         }
+    }
+
+    public void increaseSpeed(float speed)
+    {
+        this.agent.speed += speed;
     }
 
     private void Update()

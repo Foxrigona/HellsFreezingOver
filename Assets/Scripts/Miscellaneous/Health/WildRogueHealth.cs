@@ -40,5 +40,6 @@ public class WildRogueHealth : Health
         this.currentHealth = this.maxHealth;
         GetComponent<SideChanger>().changeSide(ActorType.Rebel);
         GetComponent<SpriteRenderer>().color = Color.green;
+        GetComponent<NPCMovement>().setSpeed(FindFirstObjectByType<Movement>().getSpeed());
     }
 }

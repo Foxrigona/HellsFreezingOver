@@ -5,11 +5,13 @@ public abstract class Health : MonoBehaviour
 {
     [SerializeField] protected float maxHealth = 10;
     [SerializeField] protected ActorType actorType;
+    [SerializeField] protected EnemyStats stats;
     protected float currentHealth;
     protected HealthUpdater healthUpdater;
 
     private void Awake()
     {
+        if (stats != null) this.maxHealth = stats.health;
         currentHealth = maxHealth;
         if(this is PlayerHealth) healthUpdater = FindFirstObjectByType<HealthUpdater>();
     }
@@ -19,7 +21,7 @@ public abstract class Health : MonoBehaviour
         return this.maxHealth;
     }
 
-    public void recoverHealth(int amt)
+    public virtual void recoverHealth(int amt)
     {
         this.currentHealth += amt;
         if(this.currentHealth > maxHealth) this.currentHealth = maxHealth;

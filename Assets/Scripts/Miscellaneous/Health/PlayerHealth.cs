@@ -43,6 +43,12 @@ public class PlayerHealth : Health
         this.potionUpdater.updatePotionCount(this.potionCount);
     }
 
+    public override void recoverHealth(int amt)
+    {
+        base.recoverHealth(amt);
+        this.healthUpdater.updateDisplay((int)this.currentHealth, (int)this.maxHealth);
+    }
+
     private void usePotion()
     {
         if (this.potionCount <= 0) return;

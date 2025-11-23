@@ -79,7 +79,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 0.4575472, g: 1, b: 0.92275524, a: 0.5686275}
   m_FlipX: 0
@@ -222,7 +222,8 @@ MonoBehaviour:
   acceleration: 7
   maxSpeed: 5
   dashFactor: 1
-  dashSpeed: 0.1
+  dashSpeed: 5
+  dashTime: 0.1
   dashCooldown: 1
   canDash: 1
   isDashing: 0
@@ -241,6 +242,7 @@ MonoBehaviour:
   cooldown: 0.3
   projectilePrefab: {fileID: 2470140524257451280, guid: fd2e1b2a49013574ca9528373b0aef69, type: 3}
   bulletData: {fileID: 11400000, guid: 517c003a3e49c3e4bb5909863df9e002, type: 2}
+  distanceFromPlayer: 0.5
   bulletsPerShot: 1
   offsetAngle: 30
 --- !u!114 &3283773925164850136
@@ -276,7 +278,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
   maxHealth: 150
   actorType: 0
+  stats: {fileID: 0}
   damageCooldown: 0.2
+  potionCount: 0
 --- !u!114 &8563898993760803438
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -290,7 +294,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyKillHandler
   enemiesKilled: 0
-  demonEssenceCount: 20
+  demonEssenceCount: 0
 --- !u!1 &5067911902746440358
 GameObject:
   m_ObjectHideFlags: 0
@@ -370,7 +374,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 3
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0

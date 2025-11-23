@@ -9,6 +9,7 @@ public class Aimer : MonoBehaviour
     [SerializeField] private float cooldown = 2f;
     [SerializeField] private GameObject projectilePrefab;
     [SerializeField] private AbilityScriptableObject bulletData;
+    [SerializeField] private float distanceFromPlayer = 0.5f;
 
     [SerializeField] private int bulletsPerShot = 1;
     [SerializeField] private float offsetAngle;
@@ -28,7 +29,7 @@ public class Aimer : MonoBehaviour
         Matrix4x4 rotationMatrix = Matrix4x4.Rotate(Quaternion.Euler(0, 0, offsetAngle));
         Vector3 aimDirection = rotationMatrix.MultiplyPoint(getAimDirection(this.transform.position));
 
-        GameObject bullet = Instantiate(projectilePrefab, this.transform.position + aimDirection * 1.5f, Quaternion.Euler(0, 0, Vector2.SignedAngle(Vector2.up, aimDirection)));
+        GameObject bullet = Instantiate(projectilePrefab, this.transform.position + aimDirection * distanceFromPlayer, Quaternion.Euler(0, 0, Vector2.SignedAngle(Vector2.up, aimDirection)));
 
         bullet.GetComponent<Projectile>().setAbilityInformation(bulletData, ActorType.Rebel);
         bullet.GetComponent<SpriteRenderer>().size = new Vector2(0.1f,0.5f);

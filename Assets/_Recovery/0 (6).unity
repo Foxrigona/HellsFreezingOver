@@ -925,12 +925,6 @@ MonoBehaviour:
   bulletCooldownUpgrade:
     m_PersistentCalls:
       m_Calls: []
-  moveSpeedUpgrade:
-    m_PersistentCalls:
-      m_Calls: []
-  dashSpeedUpgrade:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!4 &247110436
 Transform:
   m_ObjectHideFlags: 0
@@ -3808,7 +3802,7 @@ GameObject:
   - component: {fileID: 1506520240}
   - component: {fileID: 1506520242}
   - component: {fileID: 1506520243}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4924,10 +4918,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: HealthDemonCrate (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 6845620258083342660, guid: ede66b5f121753145881bbfe273bc7b7, type: 3}
-      propertyPath: costIncrement
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 7789731627342455685, guid: ede66b5f121753145881bbfe273bc7b7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 28.21
@@ -5024,6 +5014,14 @@ PrefabInstance:
     - target: {fileID: 2362959764903194870, guid: 321b8fd31305de344a6fbeff1fe1078b, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 3283773925164850136, guid: 321b8fd31305de344a6fbeff1fe1078b, type: 3}
+      propertyPath: canUseAb1
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8563898993760803438, guid: 321b8fd31305de344a6fbeff1fe1078b, type: 3}
+      propertyPath: demonEssenceCount
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5236,88 +5234,19 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy Spawner
       objectReference: {fileID: 0}
-    - target: {fileID: 7518355617669579790, guid: 73a1c5ae007d07a46b8688026ba86c30, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9110904372219111157, guid: 73a1c5ae007d07a46b8688026ba86c30, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 9110904372219111157, guid: 73a1c5ae007d07a46b8688026ba86c30, type: 3}
       propertyPath: waveCount
       value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 9110904372219111157, guid: 73a1c5ae007d07a46b8688026ba86c30, type: 3}
-      propertyPath: 'enemyTypeChance.Array.data[0]'
-      value: 95
-      objectReference: {fileID: 0}
-    - target: {fileID: 9110904372219111157, guid: 73a1c5ae007d07a46b8688026ba86c30, type: 3}
       propertyPath: 'enemyTypeChance.Array.data[1]'
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73a1c5ae007d07a46b8688026ba86c30, type: 3}
---- !u!1001 &7034532117472879221
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1880644876779902544, guid: 955b874d85c13264cb787a5ecdc33404, type: 3}
-      propertyPath: m_Name
-      value: Totem
-      objectReference: {fileID: 0}
-    - target: {fileID: 4139104300502126527, guid: 955b874d85c13264cb787a5ecdc33404, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -9.09
-      objectReference: {fileID: 0}
-    - target: {fileID: 4139104300502126527, guid: 955b874d85c13264cb787a5ecdc33404, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 5.91
-      objectReference: {fileID: 0}
-    - target: {fileID: 4139104300502126527, guid: 955b874d85c13264cb787a5ecdc33404, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4139104300502126527, guid: 955b874d85c13264cb787a5ecdc33404, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4139104300502126527, guid: 955b874d85c13264cb787a5ecdc33404, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4139104300502126527, guid: 955b874d85c13264cb787a5ecdc33404, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4139104300502126527, guid: 955b874d85c13264cb787a5ecdc33404, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4139104300502126527, guid: 955b874d85c13264cb787a5ecdc33404, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4139104300502126527, guid: 955b874d85c13264cb787a5ecdc33404, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4139104300502126527, guid: 955b874d85c13264cb787a5ecdc33404, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 955b874d85c13264cb787a5ecdc33404, type: 3}
 --- !u!1001 &8345124793468153829
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5329,6 +5258,18 @@ PrefabInstance:
     - target: {fileID: 6810773682943575262, guid: ede66b5f121753145881bbfe273bc7b7, type: 3}
       propertyPath: m_Name
       value: HealthDemonCrate
+      objectReference: {fileID: 0}
+    - target: {fileID: 7789731627342455685, guid: ede66b5f121753145881bbfe273bc7b7, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.2558779
+      objectReference: {fileID: 0}
+    - target: {fileID: 7789731627342455685, guid: ede66b5f121753145881bbfe273bc7b7, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.2558779
+      objectReference: {fileID: 0}
+    - target: {fileID: 7789731627342455685, guid: ede66b5f121753145881bbfe273bc7b7, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.2558779
       objectReference: {fileID: 0}
     - target: {fileID: 7789731627342455685, guid: ede66b5f121753145881bbfe273bc7b7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5464,4 +5405,3 @@ SceneRoots:
   - {fileID: 34468674}
   - {fileID: 8468957368705006277}
   - {fileID: 1205208485}
-  - {fileID: 7034532117472879221}

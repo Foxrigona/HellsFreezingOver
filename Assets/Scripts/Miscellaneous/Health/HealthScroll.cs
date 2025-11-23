@@ -29,6 +29,7 @@ public class HealthScroll : MonoBehaviour
     private void increaseMaxHealth(int increment)
     {
         playerHealth.setMaxHealth((int)playerHealth.getMaxHealth() + increment);
+        playerHealth.recoverHealth(increment);
     }
     private void increasePotionCount(int amount)
     {
