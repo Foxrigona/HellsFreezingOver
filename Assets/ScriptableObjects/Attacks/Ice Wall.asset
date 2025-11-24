@@ -15,7 +15,7 @@ MonoBehaviour:
   abilityName: Ice Wall
   abilityDescription: Summons an ice wall at the current cursor position.
   abilityType: 2
-  abilitySprite: {fileID: -9037892231084333765, guid: 458f5ee87af5184439b652fa964e6012, type: 3}
+  abilitySprite: {fileID: -2729374873849981093, guid: bc5788167b007fb4e818d33ee288c64a, type: 3}
   initialDamage: 0
   damageOverTime: 0
   tickTime: 0

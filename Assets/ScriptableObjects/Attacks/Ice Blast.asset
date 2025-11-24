@@ -15,11 +15,11 @@ MonoBehaviour:
   abilityName: Ice Blast
   abilityDescription: Shoots an ice blast in the enemies direction
   abilityType: 0
-  abilitySprite: {fileID: -3590568400015127577, guid: 11098b1f4d2f98d4184aa25dbe5268ac, type: 3}
+  abilitySprite: {fileID: 7618063908432084843, guid: 3449c25e863658d45818192ac9f13fa9, type: 3}
   initialDamage: 10
   damageOverTime: 0
   tickTime: 0
   abilitySize: 3
-  speed: 10
+  speed: 20
   duration: 5
   cooldown: 2

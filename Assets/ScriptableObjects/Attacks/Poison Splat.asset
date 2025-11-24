@@ -15,7 +15,7 @@ MonoBehaviour:
   abilityName: Poison splat
   abilityDescription: Shoot poison under the enemies feet, doing damage over time
   abilityType: 1
-  abilitySprite: {fileID: 1749405755195523700, guid: 14a2f22aaf8be53498eaff7b28d43c40, type: 3}
+  abilitySprite: {fileID: -7846159217175081323, guid: a95bf68b0bd13814fac184271a83b45c, type: 3}
   initialDamage: 2
   damageOverTime: 2
   tickTime: 0.5

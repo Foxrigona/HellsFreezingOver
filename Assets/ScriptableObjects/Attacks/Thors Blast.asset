@@ -15,7 +15,7 @@ MonoBehaviour:
   abilityName: Thors blast
   abilityDescription: Blast a thunder projectile quickly in a direction
   abilityType: 0
-  abilitySprite: {fileID: 4616586145415057385, guid: d0897e060b562e94c9f2abf9b1f3dfdf, type: 3}
+  abilitySprite: {fileID: -6649435242322101265, guid: 29cb5a999f1de484ab14a14b058f2c67, type: 3}
   initialDamage: 60
   damageOverTime: 0
   tickTime: 0

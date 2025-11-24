@@ -15,7 +15,7 @@ MonoBehaviour:
   abilityName: Bullet
   abilityDescription: Simple Projectile Moving in a Direction
   abilityType: 0
-  abilitySprite: {fileID: -2285543539309634841, guid: 94e55b54b27398c47875c9c17ade0014, type: 3}
+  abilitySprite: {fileID: 2208703988740019828, guid: ac023a37799ef264e9c1e859fb9d7101, type: 3}
   initialDamage: 4
   damageOverTime: 0
   tickTime: 0

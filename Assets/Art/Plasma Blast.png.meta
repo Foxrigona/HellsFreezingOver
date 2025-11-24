@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: d0897e060b562e94c9f2abf9b1f3dfdf
+guid: 29cb5a999f1de484ab14a14b058f2c67
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4616586145415057385
-    second: abstract-blue-energy-explosion-h2elvgy3v7ja2voj_0
+      213: -6649435242322101265
+    second: Plasma Blast_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -139,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: abstract-blue-energy-explosion-h2elvgy3v7ja2voj_0
+      name: Plasma Blast_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 1285
-        height: 1175
+        y: 47
+        width: 256
+        height: 162
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9ef4478b3a8611040800000000000000
-      internalID: 4616586145415057385
+      spriteID: feb7d6890e578b3a0800000000000000
+      internalID: -6649435242322101265
       vertices: []
       indices: 
       edges: []
@@ -174,7 +174,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      abstract-blue-energy-explosion-h2elvgy3v7ja2voj_0: 4616586145415057385
+      Plasma Blast_0: -6649435242322101265
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

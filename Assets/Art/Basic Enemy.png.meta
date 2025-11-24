@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 26367dec943762945a9e2994714ea419
+guid: 932c75996c57ca949ae206959d217915
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2798690672546356915
-    second: footagecrate-ice-spike-attack-1@2X_0
+      213: -8790697326484096186
+    second: Basic Enemy_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -139,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: footagecrate-ice-spike-attack-1@2X_0
+      name: Basic Enemy_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 498
-        height: 240
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3be135da652f6d620800000000000000
-      internalID: 2798690672546356915
+      spriteID: 64b70fe4b5b210680800000000000000
+      internalID: -8790697326484096186
       vertices: []
       indices: 
       edges: []
@@ -174,7 +174,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      footagecrate-ice-spike-attack-1@2X_0: 2798690672546356915
+      Basic Enemy_0: -8790697326484096186
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

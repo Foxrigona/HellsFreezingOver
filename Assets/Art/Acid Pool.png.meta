@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 94e55b54b27398c47875c9c17ade0014
+guid: a95bf68b0bd13814fac184271a83b45c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2285543539309634841
-    second: 224681_0
+      213: -7846159217175081323
+    second: Acid Pool_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -139,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 224681_0
+      name: Acid Pool_0
       rect:
         serializedVersion: 2
-        x: 169
+        x: 0
         y: 0
-        width: 174
-        height: 512
+        width: 256
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7ea92c4a24e1840e0800000000000000
-      internalID: -2285543539309634841
+      spriteID: 59e4f1143c7dc1390800000000000000
+      internalID: -7846159217175081323
       vertices: []
       indices: 
       edges: []
@@ -174,7 +174,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      224681_0: -2285543539309634841
+      Acid Pool_0: -7846159217175081323
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

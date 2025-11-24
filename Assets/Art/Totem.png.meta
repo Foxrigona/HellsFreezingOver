@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 14a2f22aaf8be53498eaff7b28d43c40
+guid: eab5c5d0705a4e149badb00c874f9e84
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1749405755195523700
-    second: pngtree-green-toxic-substance-spill-illustration-on-white-background-vector-png-image_25432966_0
+      213: -464344498758391414
+    second: Totem_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -139,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: pngtree-green-toxic-substance-spill-illustration-on-white-background-vector-png-image_25432966_0
+      name: Totem_0
       rect:
         serializedVersion: 2
-        x: 32
-        y: 104
-        width: 373
-        height: 131
+        x: 0
+        y: 0
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 472047ef343274810800000000000000
-      internalID: 1749405755195523700
+      spriteID: a89691a73215e89f0800000000000000
+      internalID: -464344498758391414
       vertices: []
       indices: 
       edges: []
@@ -174,7 +174,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      pngtree-green-toxic-substance-spill-illustration-on-white-background-vector-png-image_25432966_0: 1749405755195523700
+      Totem_0: -464344498758391414
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -15,7 +15,7 @@ MonoBehaviour:
   abilityName: Thors Wrath
   abilityDescription: Summon a bolt of lightning onto the enemy dealing massive damage
   abilityType: 1
-  abilitySprite: {fileID: 3563442364487752361, guid: 9a7d4db5a58ed794bb447168307cd2e4, type: 3}
+  abilitySprite: {fileID: 606989999377294838, guid: a50dee13ba5b8424f9aa59754faae4e5, type: 3}
   initialDamage: 40
   damageOverTime: 0
   tickTime: 0
