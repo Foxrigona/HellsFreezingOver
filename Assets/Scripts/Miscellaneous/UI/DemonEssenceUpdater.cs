@@ -11,6 +11,6 @@ public class DemonEssenceUpdater : MonoBehaviour
     }
     public void updateDemonEssence(int essenceCount)
     {
-        text.text = "DEMON ESSENCE: " + essenceCount;
+        text.text = essenceCount.ToString();
     }
 }

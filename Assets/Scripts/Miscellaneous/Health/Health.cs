@@ -6,6 +6,7 @@ public abstract class Health : MonoBehaviour
     [SerializeField] protected float maxHealth = 10;
     [SerializeField] protected ActorType actorType;
     [SerializeField] protected EnemyStats stats;
+    protected PlayerVisualizer playerVisualizer;
     protected float currentHealth;
     protected HealthUpdater healthUpdater;
 
@@ -14,6 +15,8 @@ public abstract class Health : MonoBehaviour
         if (stats != null) this.maxHealth = stats.health;
         currentHealth = maxHealth;
         if(this is PlayerHealth) healthUpdater = FindFirstObjectByType<HealthUpdater>();
+        this.playerVisualizer = GetComponentInChildren<PlayerVisualizer>();
+        Debug.Log(this.playerVisualizer == null);
     }
 
     public float getMaxHealth()
@@ -50,6 +53,7 @@ public abstract class Health : MonoBehaviour
     public virtual void decreaseHealth(float damage)
     {
         currentHealth -= damage;
+        if(this.playerVisualizer != null) this.playerVisualizer.visualizeDamage();
         if (currentHealth <= 0)
             kill();
     }

@@ -11,6 +11,12 @@ public class PlayerVisualizer : MonoBehaviour
     private void Start()
     {
         playerSprite = GetComponent<SpriteRenderer>();
+        playerSprite.color = this.baseColor;
+    }
+
+    private void OnEnable()
+    {
+        if(playerSprite != null)playerSprite.color = this.baseColor;
     }
 
     public void visualizeDamage()

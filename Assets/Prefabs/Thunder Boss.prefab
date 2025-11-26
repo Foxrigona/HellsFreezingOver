@@ -24,6 +24,14 @@ PrefabInstance:
       propertyPath: stoppingDistance
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3516528320996534209, guid: 7b56abac21edb6f4ea5f7b8c673d2634, type: 3}
+      propertyPath: baseColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3516528320996534209, guid: 7b56abac21edb6f4ea5f7b8c673d2634, type: 3}
+      propertyPath: baseColor.r
+      value: 0.76470596
+      objectReference: {fileID: 0}
     - target: {fileID: 4510878317847457910, guid: 7b56abac21edb6f4ea5f7b8c673d2634, type: 3}
       propertyPath: m_Name
       value: Thunder Boss
@@ -79,6 +87,18 @@ PrefabInstance:
     - target: {fileID: 4756986469493596491, guid: 7b56abac21edb6f4ea5f7b8c673d2634, type: 3}
       propertyPath: m_Color.r
       value: 0.8358446
+      objectReference: {fileID: 0}
+    - target: {fileID: 5862891501720575169, guid: 7b56abac21edb6f4ea5f7b8c673d2634, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5862891501720575169, guid: 7b56abac21edb6f4ea5f7b8c673d2634, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5862891501720575169, guid: 7b56abac21edb6f4ea5f7b8c673d2634, type: 3}
+      propertyPath: m_Color.r
+      value: 0.7664137
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 24769080697052449, guid: 7b56abac21edb6f4ea5f7b8c673d2634, type: 3}

@@ -20,6 +20,18 @@ PrefabInstance:
       propertyPath: ability2
       value: 
       objectReference: {fileID: 11400000, guid: 900d1d18ecd04574f9f76c9c2176dd65, type: 2}
+    - target: {fileID: 3516528320996534209, guid: 7b56abac21edb6f4ea5f7b8c673d2634, type: 3}
+      propertyPath: baseColor.b
+      value: 0.9921569
+      objectReference: {fileID: 0}
+    - target: {fileID: 3516528320996534209, guid: 7b56abac21edb6f4ea5f7b8c673d2634, type: 3}
+      propertyPath: baseColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3516528320996534209, guid: 7b56abac21edb6f4ea5f7b8c673d2634, type: 3}
+      propertyPath: baseColor.r
+      value: 0.6666667
+      objectReference: {fileID: 0}
     - target: {fileID: 4510878317847457910, guid: 7b56abac21edb6f4ea5f7b8c673d2634, type: 3}
       propertyPath: m_Name
       value: Ice Rogue
@@ -75,6 +87,18 @@ PrefabInstance:
     - target: {fileID: 4756986469493596491, guid: 7b56abac21edb6f4ea5f7b8c673d2634, type: 3}
       propertyPath: m_Color.r
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5862891501720575169, guid: 7b56abac21edb6f4ea5f7b8c673d2634, type: 3}
+      propertyPath: m_Color.b
+      value: 0.9909082
+      objectReference: {fileID: 0}
+    - target: {fileID: 5862891501720575169, guid: 7b56abac21edb6f4ea5f7b8c673d2634, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5862891501720575169, guid: 7b56abac21edb6f4ea5f7b8c673d2634, type: 3}
+      propertyPath: m_Color.r
+      value: 0.6650944
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

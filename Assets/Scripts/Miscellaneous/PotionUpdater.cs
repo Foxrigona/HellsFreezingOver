@@ -12,6 +12,6 @@ public class PotionUpdater : MonoBehaviour
 
     public void updatePotionCount(int potionCount)
     {
-        this.textBox.text = "Potions: " + potionCount;
+        this.textBox.text = potionCount.ToString();
     }
 }

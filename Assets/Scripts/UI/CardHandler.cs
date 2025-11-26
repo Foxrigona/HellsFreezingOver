@@ -22,13 +22,13 @@ public class CardHandler : MonoBehaviour
         {
             if (this.cardNum == 1)
             {
-                if (choice == 0) this.textBox.text = "THIS IS COOLDOWN";
-                else if (choice == 1) this.textBox.text = "INCREASE MOVEMENT SPEED";
+                if (choice == 0) this.textBox.text = "Double bullet fire rate";
+                else if (choice == 1) this.textBox.text = "Increase Movement Speed";
             }
             else if (this.cardNum == 2)
             {
-                if (choice == 0) this.textBox.text = "THIS IS BULLET RANGE";
-                else if (choice == 1) this.textBox.text = "INCREASE DASH SPEED";
+                if (choice == 0) this.textBox.text = "Increase bullets shot per round by 1";
+                else if (choice == 1) this.textBox.text = "Increase Dashing distance";
             }
         }
 
@@ -36,11 +36,11 @@ public class CardHandler : MonoBehaviour
         {
             if (this.cardNum == 1)
             {
-                this.textBox.text = "Recruit as ally";
+                this.textBox.text = "Recruit Rogue as an Ally";
             }
             else if (this.cardNum == 2)
             {
-                this.textBox.text = "Kill and take powers";
+                this.textBox.text = "Kill the Rogue and take their powers";
             }
         }
 
@@ -48,7 +48,7 @@ public class CardHandler : MonoBehaviour
         {
             if(this.cardNum == 1)
             {
-                this.textBox.text = "Get a health potion";
+                this.textBox.text = "Get a health potion\n(Press F)";
             }
 
             if (this.cardNum == 2)

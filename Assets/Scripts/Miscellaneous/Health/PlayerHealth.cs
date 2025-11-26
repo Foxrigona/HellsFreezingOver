@@ -9,14 +9,12 @@ public class PlayerHealth : Health
     [SerializeField] private int potionCount = 0;
 
     private bool isInvincible = false;
-    private PlayerVisualizer playerVisualizer;
     private PotionUpdater potionUpdater;
     private InputAction potionUseButton;
 
     public void Start()
     {
         this.potionUpdater = FindFirstObjectByType<PotionUpdater>();
-        playerVisualizer = GetComponentInChildren<PlayerVisualizer>();
         healthUpdater.updateDisplay((int)this.currentHealth, (int)this.maxHealth);
         this.potionUseButton = InputSystem.actions.FindAction("Use Potion");
     }
